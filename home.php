@@ -14,13 +14,11 @@
                     <a href="#about" class="btn-custom relative">Qui suis je ?</a>
                     <ul class="flex items-center gap-2">
                         <li>
-                            <a href="#"><i class="icon-facebook-1"></i></a>
+                            <a href="https://www.facebook.com/prudence.salanon"><i class="icon-facebook-1"></i></a>
                         </li>
+                        
                         <li>
-                            <a href="#"><i class="icon-twitter-1"></i></a>
-                        </li>
-                        <li>
-                            <a href="#"><i class="icon-linkedin-1"></i></a>
+                            <a href="https://www.linkedin.com/in/prudence-salanon-b67752241"><i class="icon-linkedin-1"></i></a>
                         </li>
                     </ul>
                 </div>

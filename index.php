@@ -1,3 +1,29 @@
+<?php 
+if (isset($_POST['send'])) {
+    $nom = $_POST['nom'];
+    $mail = $_POST['mail'];
+    $tel = $_POST['tel'];
+    $message = $_POST['message'];
+    
+    $destinataire = 'gbelidjiprud@gmail.com';
+    $expediteur = $mail;
+    $copie = 'gbelidjiprud@gmail.com';
+    $copie_cachee = 'gbelidjiprud@gmail.com';
+    $objet = 'Contact par le site'; // Objet du message
+    $headers  = 'MIME-Version: 1.0' . "\n"; // Version MIME
+    $headers .= 'Content-type: text/html; charset=ISO-8859-1'."\n"; // l'en-tete Content-type pour le format HTML
+    $headers .= 'Reply-To: '.$expediteur."\n"; // Mail de reponse
+    $headers .= 'From: "Nom_de_expediteur"<'.$expediteur.'>'."\n"; // Expediteur
+    $headers .= 'Delivered-to: '.$destinataire."\n"; // Destinataire
+    $headers .= 'Cc: '.$copie."\n"; // Copie Cc
+    $headers .= 'Bcc: '.$copie_cachee."\n\n"; // Copie cachée Bcc        
+
+    mail($destinataire, $objet, $message, $headers);
+
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="fr" class="scroll-smooth">
 
@@ -355,7 +381,7 @@
 
                         <div>
                             <h3 class="text-[30px] mb-4">Français</h3>
-                            <p class="text-muted dark:text-darkmuted text-lg leading-[30px]">                               
+                            <p class="text-muted dark:text-darkmuted text-lg leading-[30px]">
                                 Niveau: Avancé
                             </p>
                         </div>
@@ -458,33 +484,37 @@
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
                             <div>
                                 <label class="block">
-                                    <input type="text" class="form-input" placeholder="Votre nom" required="" />
+                                    <input type="text" class="form-input" name="nom" placeholder="Votre nom"
+                                        required="" />
                                 </label>
                             </div>
                             <div>
                                 <label class="block">
-                                    <input type="email" class="form-input" placeholder="Votre mail" required="" />
+                                    <input type="email" class="form-input" placeholder="Votre mail" name="mail"
+                                        required="" />
                                 </label>
                             </div>
                             <div>
                                 <label class="block">
-                                    <input type="text" class="form-input" placeholder="Votre téléphone" required="" />
+                                    <input type="text" class="form-input" placeholder="Votre téléphone" name="tel"
+                                        required="" />
                                 </label>
                             </div>
                             <div>
                                 <label class="block">
-                                    <input type="text" class="form-input" placeholder="Objet" required="" />
+                                    <input type="text" class="form-input" placeholder="Objet" name="objet"
+                                        required="" />
                                 </label>
                             </div>
                             <div class="md:col-span-2">
                                 <label class="block">
-                                    <textarea class="form-input h-auto" rows="7" placeholder="Votre message"
-                                        required></textarea>
+                                    <textarea class="form-input h-auto" rows="7" name="message"
+                                        placeholder="Votre message" required></textarea>
                                 </label>
                             </div>
                             <div class="md:col-span-2">
                                 <label class="block">
-                                    <button class="btn-custom" type="submit">Envoyez</button>
+                                    <button class="btn-custom" type="submit" name="send">Envoyez</button>
                                 </label>
                             </div>
                         </div>

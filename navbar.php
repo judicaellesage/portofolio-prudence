@@ -34,7 +34,7 @@
                         <li class="about"><a href="#about" class="text-base font-medium hover:text-custom font-secondary ease-in-out duration-300 inline-block leading-6 p-2">A propos</a></li>
                         <li class="service"><a href="#service" class="text-base font-medium hover:text-custom font-secondary ease-in-out duration-300 inline-block leading-6 p-2">Expériences</a></li>
                         <li class="contact"><a href="#contact" class="text-base font-medium hover:text-custom font-secondary ease-in-out duration-300 inline-block leading-6 p-2">Contact</a></li>
-                        <a href="#" class="btn-outline-custom relative">Mon CV</a>
+                        <a href="cv.pdf" class="btn-outline-custom relative">Mon CV</a>
                     </ul>
                 </div>
             </div>
